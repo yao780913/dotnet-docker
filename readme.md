@@ -57,3 +57,19 @@ CONTAINER ID   IMAGE                  COMMAND                  CREATED          
 
 $ docker stop db-admin dotnet-app db
 ```
+### Docker Compose
+定義了 `app`, `db` 與 `adminer`, 並設定了 `volume`
+> 此時去檢查 `docker-compose.yml`, 會發現其中並沒有設定 network, 因為在 docker-compose, 會自動幫你建一個 network\
+
+
+```
+$ docker compose up
+
+- Network dotnet-docker_default         Created    0.0s
+- Container dotnet-docker-adiminer-1    Created    0.0s
+- Container dotnet-docker-db-1          Created    0.0s
+- Container dotnet-docker-app-1         Created    0.0s
+```
+也可以使用 Detached mode `docker-compose up --build -d`
+
+
