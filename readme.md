@@ -1,5 +1,4 @@
-﻿Build Image
----
+﻿## Build Image
 * build image\
     `docker build -t dotnet-docker:v1.0.0 .`
 * docker run\
@@ -7,8 +6,7 @@
 * docker stop\
 `docker stop dotnet-app`
 
-Develop
----
+## Develop
 ### 測試 postgres sql
 * Create **volume**\
     `docker volume create postgres-data`
@@ -72,4 +70,5 @@ $ docker compose up
 ```
 也可以使用 Detached mode `docker-compose up --build -d`
 
-
+### The `.env` file
+`POSTGRES_PASSWORD=postgres`
